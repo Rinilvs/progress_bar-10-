@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bars</title>
+    <style>
+        /* Style untuk container utama */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            padding: 20px;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            border: 1px solid black;
+        }
+
+        .progress-container {
+            display: flex;
+            width: 100%;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            justify-content: space-between;
+        }
+
+        /* Style untuk progress bar */
+        .progress-bar {
+            height: 27px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: relative;
+        }
+
+        /* Style untuk nilai persentase */
+        .progress-value {
+            color: white;
+            padding: .27rem;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            position: relative;
+        }
+
+        /* Media queries for responsive design */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Progress Bar (10)</h1>
+        <!-- Progress Bar 1 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar1" style="width: 90%; background-color: #ff5733;"></div>
+            <div class="progress-value" id="progressValue1">90%</div>
+        </div>
+
+        <!-- Progress Bar 2 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar2" style="width: 50%; background-color: #33ff57;"></div>
+            <div class="progress-value" id="progressValue2">50%</div>
+        </div>
+
+        <!-- Progress Bar 3 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar3" style="width: 75%; background-color: #ffa500;"></div>
+            <div class="progress-value" id="progressValue3">75%</div>
+        </div>
+
+        <!-- Progress Bar 4 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar4" style="width: 20%; background-color: #9932cc;"></div>
+            <div class="progress-value" id="progressValue4">20%</div>
+        </div>
+
+        <!-- Progress Bar 5 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar5" style="width: 40%; background-color: #ff1493;"></div>
+            <div class="progress-value" id="progressValue5">40%</div>
+        </div>
+
+        <!-- Progress Bar 6 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar6" style="width: 60%; background-color: #00ced1;"></div>
+            <div class="progress-value" id="progressValue6">60%</div>
+        </div>
+
+        <!-- Progress Bar 7 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar7" style="width: 10%; background-color: #ffa07a;"></div>
+            <div class="progress-value" id="progressValue7">10%</div>
+        </div>
+
+        <!-- Progress Bar 8 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar8" style="width: 85%; background-color: #f0e68c;"></div>
+            <div class="progress-value" id="progressValue8">85%</div>
+        </div>
+
+        <!-- Progress Bar 9 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar9" style="width: 30%; background-color: #8fbc8f;"></div>
+            <div class="progress-value" id="progressValue9">30%</div>
+        </div>
+
+        <!-- Progress Bar 10 -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar10" style="width: 95%; background-color: #d2b48c;"></div>
+            <div class="progress-value" id="progressValue10">95%</div>
+        </div>
+    </div>
+
+    <script>
+        // Mendapatkan elemen progress bar dan nilai persentase
+        function setProgressBarWidth(percentage, progressBar, progressValue) {
+            progressBar.style.width = percentage + "%";
+            progressValue.innerText = percentage + "%";
+        }
+
+        // Memanggil fungsi setProgressBarWidth saat halaman dimuat
+        window.onload = function() {
+            // Progress Bar 1
+            var progressBar1 = document.getElementById("myProgressBar1");
+            var progressValue1 = document.getElementById("progressValue1");
+            setProgressBarWidth(90, progressBar1, progressValue1);
+
+            // Progress Bar 2
+            var progressBar2 = document.getElementById("myProgressBar2");
+            var progressValue2 = document.getElementById("progressValue2");
+            setProgressBarWidth(50, progressBar2, progressValue2);
+
+            // Progress Bar 3
+            var progressBar3 = document.getElementById("myProgressBar3");
+            var progressValue3 = document.getElementById("progressValue3");
+            setProgressBarWidth(75, progressBar3, progressValue3);
+
+            // Progress Bar 4
+            var progressBar4 = document.getElementById("myProgressBar4");
+            var progressValue4 = document.getElementById("progressValue4");
+            setProgressBarWidth(20, progressBar4, progressValue4);
+
+            // Progress Bar 5
+            var progressBar5 = document.getElementById("myProgressBar5");
+            var progressValue5 = document.getElementById("progressValue5");
+            setProgressBarWidth(40, progressBar5, progressValue5);
+
+            // Progress Bar 6
+            var progressBar6 = document.getElementById("myProgressBar6");
+            var progressValue6 = document.getElementById("progressValue6");
+            setProgressBarWidth(60, progressBar6, progressValue6);
+
+            // Progress Bar 7
+            var progressBar7 = document.getElementById("myProgressBar7");
+            var progressValue7 = document.getElementById("progressValue7");
+            setProgressBarWidth(10, progressBar7, progressValue7);
+
+            // Progress Bar 8
+            var progressBar8 = document.getElementById("myProgressBar8");
+            var progressValue8 = document.getElementById("progressValue8");
+            setProgressBarWidth(85, progressBar8, progressValue8);
+
+            // Progress Bar 9
+            var progressBar9 = document.getElementById("myProgressBar9");
+            var progressValue9 = document.getElementById("progressValue9");
+            setProgressBarWidth(30, progressBar9, progressValue9);
+
+            // Progress Bar 10
+            var progressBar10 = document.getElementById("myProgressBar10");
+            var progressValue10 = document.getElementById("progressValue10");
+            setProgressBarWidth(95, progressBar10, progressValue10);
+        };
+    </script>
+</body>
+</html>
